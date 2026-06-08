@@ -6,8 +6,16 @@ from models.product import Product
 from routes.product import product_routes
 from models.order import Order
 from routes.order import order_routes
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.on_event("startup")
 def on_startup():

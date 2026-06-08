@@ -31,7 +31,7 @@ def get_status_order(
     return get_order_by_status(status,session)
 
 
-@order_routes.put("/update",response_model=OrderResponse)
+@order_routes.put("/update/order",response_model=OrderResponse)
 def update_order(
     order_id:int,
     order_data: OrderStatusUpdate,
