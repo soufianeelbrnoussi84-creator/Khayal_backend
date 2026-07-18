@@ -18,7 +18,7 @@ class UserLogin(BaseModel):
 
 
 class UserResponse(BaseModel):
-    model_config = {"from_attributes": True}
+    model_config = {"from_attributes": True} # from_attributes = True is the translator between SQLModel objects and Pydantic schemas because pydantice it donsen't understand the SQLModel objects
     id: int
     email: str
     first_name: str

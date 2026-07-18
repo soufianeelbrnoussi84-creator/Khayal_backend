@@ -22,7 +22,7 @@ def hashed_password(h_password: str):
     return pwd_context.hash(h_password)
 
 def verify_password(plain_password: str, hash_password: str):
-    return pwd_context.verify(plain_password, hash_password)
+    return pwd_context.verify(plain_password, hash_password) # the plain password is the origin password and the hash_password is the password after hashed 
 
 def creat_access_token(data: dict):
     to_encode= data.copy()

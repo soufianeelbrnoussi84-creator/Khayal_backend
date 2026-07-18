@@ -45,7 +45,3 @@ class ProductResponse(BaseModel):
     image_url:Optional[str]=None
     created_at: datetime
     
-
-
-
-
